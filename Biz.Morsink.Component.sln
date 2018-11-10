@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biz.Morsink.Component", "Biz.Morsink.Component\Biz.Morsink.Component.csproj", "{E586DF0B-EE3B-4F9B-831F-37DE17132297}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biz.Morsink.Component.Test", "Biz.Morsink.Component.Test\Biz.Morsink.Component.Test.csproj", "{CEFE089D-C2F9-44C7-8521-DF9A7BC6D0DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E586DF0B-EE3B-4F9B-831F-37DE17132297}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E586DF0B-EE3B-4F9B-831F-37DE17132297}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E586DF0B-EE3B-4F9B-831F-37DE17132297}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E586DF0B-EE3B-4F9B-831F-37DE17132297}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEFE089D-C2F9-44C7-8521-DF9A7BC6D0DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEFE089D-C2F9-44C7-8521-DF9A7BC6D0DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEFE089D-C2F9-44C7-8521-DF9A7BC6D0DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEFE089D-C2F9-44C7-8521-DF9A7BC6D0DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {65E9E1F9-60AE-4351-AA32-54D9454EC971}
+	EndGlobalSection
+EndGlobal
