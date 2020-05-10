@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -25,6 +26,10 @@ namespace Biz.Morsink.Component
                     flex.Add(component);
                 return flex;
             });
+        }
+        public static ContainerBuilder BuildImmutable()
+        {
+            return new ContainerBuilder(components => new ImmutableContainer(components.ToImmutableList()));
         }
 
         public static IFlexibleContainer CreateFlexible()
@@ -89,6 +94,14 @@ namespace Biz.Morsink.Component
             return false;
         }
         public static T GetOrDefault<T>(this IContainer container)
-            => container.TryGetSingle<T>(out var t) ? t : default;   
+            => container.TryGetSingle<T>(out var t) ? t : default;
+
+        public static IContainer Append(this IContainer left, IContainer right)
+        {
+            if (left is ImmutableContainer icleft)
+                return icleft.Append(right);
+            else
+                return new ImmutableContainer(left.GetAll<object>().Concat(right.GetAll<object>()).ToImmutableList());
+        }
     }
 }
