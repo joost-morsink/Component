@@ -4,10 +4,20 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>7.1</LangVersion>
     <VersionPrefix>0.1.0</VersionPrefix>
+    <PackageId>Biz.Morsink.Component</PackageId>
+    <Description>Component containers</Description>
+    <PackageProjectUrl>https://github.com/joost-morsink/Component</PackageProjectUrl>
+    <RootNamespace>Biz.Morsink.Component</RootNamespace>
+    <Copyright>(C) 2020 Joost W. Morsink</Copyright>
+    <PackageTags>Collections</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <RepositoryType>Git</RepositoryType>
+    <RepositoryUrl>https://github.com/joost-morsink/Component.git</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Collections.Immutable" Version="1.5.0" />
+    <PackageReference Include="System.Collections.Immutable" Version="[1.5.0,2.0.0)" />
   </ItemGroup>
 
 </Project>
