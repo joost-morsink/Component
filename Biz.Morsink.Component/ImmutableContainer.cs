@@ -22,12 +22,14 @@ namespace Biz.Morsink.Component
         public IEnumerable<T> GetAll<T>()
             => GetAll(typeof(T)).Cast<T>();
 
-        public IContainer Append(IContainer other)
+        public ImmutableContainer Append(IContainer other)
         {
             if (other is ImmutableContainer icother)
-                return new ImmutableContainer(_objects.AddRange(icother._objects));
+                return AddRange(icother._objects);
             else
-                return new ImmutableContainer(_objects.AddRange(other.GetAll<object>()));
+                return AddRange(other.GetAll<object>());
         }
+        public ImmutableContainer AddRange(IEnumerable<object> objects)
+            => new ImmutableContainer(_objects.AddRange(objects));
     }
 }

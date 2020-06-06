@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>7.1</LangVersion>
-    <VersionPrefix>0.1.0</VersionPrefix>
+    <VersionPrefix>0.2.0</VersionPrefix>
     <PackageId>Biz.Morsink.Component</PackageId>
     <Description>Component containers</Description>
     <PackageProjectUrl>https://github.com/joost-morsink/Component</PackageProjectUrl>

@@ -20,7 +20,13 @@ namespace Biz.Morsink.Component
         {
             return new ContainerBuilder(constructor, components.Push(component));
         }
-
+        public ContainerBuilder AddRange(IEnumerable<object> comps)
+        {
+            var cs = components;
+            foreach (var c in comps)
+                cs = cs.Push(c);
+            return new ContainerBuilder(constructor, cs);
+        }
         IContainerBuilder IContainerBuilder.Add(object component)
             => Add(component);
 

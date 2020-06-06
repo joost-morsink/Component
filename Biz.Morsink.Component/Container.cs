@@ -31,6 +31,7 @@ namespace Biz.Morsink.Component
         {
             return new ContainerBuilder(components => new ImmutableContainer(components.ToImmutableList()));
         }
+        public static IContainer Empty { get; } = new ImmutableContainer(ImmutableList<object>.Empty);
 
         public static IFlexibleContainer CreateFlexible()
             => new FlexibleContainerImplConcurrent();
@@ -102,6 +103,20 @@ namespace Biz.Morsink.Component
                 return icleft.Append(right);
             else
                 return new ImmutableContainer(left.GetAll<object>().Concat(right.GetAll<object>()).ToImmutableList());
+        }
+        public static IContainer AddRange(this IContainer container, IEnumerable<object> objects)
+        {
+            if (container is ImmutableContainer ic)
+                return ic.AddRange(objects);
+            else
+                return new ImmutableContainer(container.GetAll<object>().Concat(objects).ToImmutableList());
+        }
+        public static IContainer Add(this IContainer container, object obj)
+        {
+            if (container is ImmutableContainer ic)
+                return ic.Add(obj);
+            else
+                return new ImmutableContainer(container.GetAll<object>().ToImmutableList().Add(obj));
         }
     }
 }
