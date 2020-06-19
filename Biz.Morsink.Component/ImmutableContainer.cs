@@ -29,6 +29,8 @@ namespace Biz.Morsink.Component
             else
                 return AddRange(other.GetAll<object>());
         }
+        public ImmutableContainer Add(object obj)
+            => new ImmutableContainer(_objects.Add(obj));
         public ImmutableContainer AddRange(IEnumerable<object> objects)
             => new ImmutableContainer(_objects.AddRange(objects));
     }
